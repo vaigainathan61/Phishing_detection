@@ -5,7 +5,7 @@ A Machine Learning powered Flask web application to detect whether a given URL i
 ## 📸 Screenshots
 
 ### 🧠 About Page
-![About](./screenshots/about.png)
+(https://github.com/vaigainathan61/Phishing_detection/blob/main/Screenshot%20(4).png)
 
 ### 🔍 URL Detection Input
 ![Detection Input](./screenshots/input.png)
