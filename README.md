@@ -11,7 +11,7 @@ A Machine Learning powered Flask web application to detect whether a given URL i
 (https://github.com/vaigainathan61/Phishing_detection/blob/main/Screenshot%20(8).png)
 
 ### ⚠️ Phishing Result
-![Phishing Result](./screenshots/phishing.png)
+https://github.com/vaigainathan61/Phishing_detection/blob/main/Screenshot%20(9).png
 
 ### ✅ Safe Result
 ![Safe Result](./screenshots/safe.png)
