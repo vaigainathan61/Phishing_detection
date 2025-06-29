@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+<title>Phishing Detection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<style>
+  /* Reset and center */
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f4f4f4;
+     
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+ }
+ 
+ /* Result container */
+ .result-container {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     width: 90%; /* Allow flexibility */
+     max-width: 600px; /* Limit max width */
+     word-wrap: break-word; /* Ensure text wraps */
+     overflow-wrap: break-word; /* Ensure long words break */
+ }
+ 
+ /* Headings */
+ .h2 {
+     color: #333;
+     margin-bottom: 15px;
+ }
+ 
+ /* URL text */
+ .url-text {
+     font-weight: bold;
+     color: #555;
+     display: block;
+     word-break: break-all; /* Force break long URLs */
+     max-width: 100%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: normal;
+ }
+ 
+ /* Predictions */
+ .prediction {
+     font-weight: bold;
+     color: #007BFF;
+ }
+ 
+ /* Final Prediction */
+ .final-prediction {
+     font-size: 18px;
+     font-weight: bold;
+     padding: 5px 10px;
+     border-radius: 5px;
+ }
+ 
+ /* Phishing result */
+ .final-prediction.phishing {
+     color: red;
+     background-color: #ffd6d6;
+ }
+ 
+ /* Safe result */
+ .final-prediction.safe {
+     color: green;
+     background-color: #d6ffd6;
+ }
+ 
+ /* Try Again button */
+ .back-button {
+     display: inline-block;
+     margin-top: 15px;
+     padding: 10px 15px;
+     background-color: #007BFF;
+     color: white;
+     text-decoration: none;
+     border-radius: 5px;
+ }
+ 
+ .back-button:hover {
+     background-color: #0056b3;
+ }
+ 
+ 
+ </style>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <section> 
+      <!-- ################################################################################################ -->
+      <div></div>
+      <div>
+        <h1 id="logo"><a href="{{ url_for('home') }}">Phishing Detection</a></h1>
+      </div>
+      <div>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <legend>Search:</legend>
+            <input type="search" value="" placeholder="Search Here&hellip;">
+            <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </section>
+    <nav id="mainav"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="#">Home</a></li>
+        
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+    
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/01.jpeg') }}');">
+  
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Register</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Phishing Detection</h6>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+       <center>
+        <div class="result-container">
+          <h2 class="h2">🔍 Prediction Result</h2>
+          <p><strong>URL:</strong> <span class="url-text">{{ url }}</span></p>
+          <p><strong>XGBoost Prediction:</strong> <span class="prediction">{{ xgb }}</span></p>
+          <p><strong>CatBoost Prediction:</strong> <span class="prediction">{{ cat }}</span></p>
+          <p><strong>LSTM Prediction:</strong> <span class="prediction">{{ lstm }}</span></p>
+          <p><strong>Final Ensemble Prediction:</strong> 
+              <span class="final-prediction {% if ensemble == 1 %}phishing{% else %}safe{% endif %}">
+                  {% if ensemble == 1 %} 🚨 Phishing {% else %} ✅ Safe {% endif %}
+              </span>
+          </p>
+          <a href="/predict_page" class="back-button">🔄 Try Again</a>
+      </div>
+  </center>
+      <div id="comments">
+        
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+   
+    <div class="one_quarter">
+      
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy;- All Rights Reserved - <a href="#">Phishing Detection</a></p>
+    <p class="fl_right"><a target="_blank" href="" title=""></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
+
+
+
+
+
+

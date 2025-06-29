@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+<title>Crime rate prediction</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <section> 
+      <!-- ################################################################################################ -->
+      <div> </div>
+      <div>
+        <h1 id="logo"><a href="#">Phishing detection</a></h1>
+      </div>
+      <div>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <legend>Search:</legend>
+            <input type="search" value="" placeholder="Search Here&hellip;">
+            <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </section>
+    <nav id="mainav"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li class="active"><a href="#">Home</a></li>
+       
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Register</a></li>
+      
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/01.jpeg') }}');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">Phishing detection</h3>
+      <p>In the modern digital era, websites play a crucial role in various domains, including e-commerce, banking, social networking, and information sharing. However, with the increasing reliance on online platforms, cyber threats such as phishing, malware, and fraudulent activities have also risen significantly. Detecting malicious URLs is essential to ensuring online safety and protecting users from cyber-attacks.</p>
+      <footer><a class="btn" href="{{ url_for('about') }}">Learn More</a></footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">About this Project</h6>
+      <p></p>
+    </div>
+    <div class="group">
+      <div class="one_half first">
+        <img class="inspace-15 borderedbox" src="{{ url_for('static', filename='images/demo/474x356.jpeg') }}" alt="">
+    </div>    
+      <div class="one_half">
+        <ul class="nospace group inspace-15">
+          <li class="one_half first btmspace-50">
+            <article>
+              <h6 class="heading"><a href="#">Feature Extraction from URLs</a></h6>
+              <p class="nospace">The foundation of this project is based on extracting key attributes from URLs. Various structural, lexical, and behavioral features are analyzed, such as URL length, domain type, presence of obfuscation techniques, number of subdomains, and the use of HTTPS.</p>
+            </article>
+          </li>
+          <li class="one_half btmspace-50">
+            <article>
+              <h6 class="heading"><a href="#">Data Analysis and Pattern Recognition</a></h6>
+              <p class="nospace">Once the features are extracted, the next step involves analyzing patterns in the dataset. This includes identifying common characteristics of malicious URLs, such as unusually long domains, a high number of special characters, or mismatches between the domain name and the website content</p>
+            </article>
+          </li>
+          <li class="one_half first">
+            <article>
+              <h6 class="heading"><a href="#"> Machine Learning-Based Classification</a></h6>
+              <p class="nospace">To effectively categorize URLs as safe or suspicious, machine learning algorithms are employed. Models such as Decision Trees, Random Forest, Support Vector Machines (SVM), and Neural Networks can be used to train the system using historical data</p>
+            </article>
+          </li>
+          <li class="one_half">
+            <article>
+              <h6 class="heading"><a href="#">Cybersecurity Applications and Risk Mitigation</a></h6>
+              <p class="nospace">The insights gained from this project have significant implications for cybersecurity. Organizations and users can integrate the findings into web security tools, browser extensions, or email filters to prevent phishing attacks</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+   
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy;  - All Rights Reserved - <a href="#">Phishing Detection</a></p>
+    <p class="fl_right"><a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

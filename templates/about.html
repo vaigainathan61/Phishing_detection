@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+<title>Phishing Detection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <section> 
+      <!-- ################################################################################################ -->
+      <div></div>
+      <div>
+        <h1 id="logo"><a href="{{ url_for('home') }}">Phishing Detection</a></h1>
+      </div>
+      <div>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <legend>Search:</legend>
+            <input type="search" value="" placeholder="Search Here&hellip;">
+            <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </section>
+    <nav id="mainav"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        
+        <li><a href="#">About</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Register</a></li>
+    
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/01.jpeg') }}');">
+  
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Register</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Phishing Detection</h6>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h1>Phishing Detection</h1>
+      
+      <p>This project focuses on extracting and analyzing key attributes of URLs to detect potentially harmful websites, such as phishing pages, malware-hosting domains, or fraudulent online platforms. By examining various features, including URL length, domain characteristics, subdomain count, HTTPS presence, and obfuscation techniques, the system can distinguish between legitimate and suspicious links.</p>
+      <p>Additionally, it evaluates the probability of a domain being an IP-based URL, the number of redirects, and the presence of hidden elements like external form submissions, JavaScript injections, and pop-ups. The project also assesses metadata elements, such as page title relevance, favicon existence, social media links, and copyright information, which are commonly manipulated in malicious websites.</p>
+      <img class="imgl borderedbox inspace-5" src="{{ url_for('static', filename='images/demo/imgl.jpeg') }}" alt="" height="300px" width="400px">
+      <p> Advanced statistical and machine learning techniques are employed to analyze patterns in the dataset, highlighting key indicators of cybersecurity threats. The classification model, trained using historical URL data, enables real-time detection of harmful web links. </p>
+      <p>This system can be integrated into cybersecurity tools like email filters, browser extensions, or corporate firewalls to proactively block phishing attempts and malicious domains. By continuously updating the dataset with new URL characteristics, the project ensures improved accuracy in identifying emerging threats. Furthermore, organizations can leverage this research to strengthen their online security measures, mitigating the risk of cyberattacks.</p>
+      <p>In an era where digital fraud is rapidly increasing, this project provides an essential mechanism for safeguarding users from deceptive websites. The approach enhances cybersecurity awareness by demonstrating how attackers exploit various URL and web page elements to deceive users. The automated analysis helps minimize human errors in detecting phishing links, making it a valuable addition to cybersecurity infrastructure. </p>
+      
+      <div id="comments">
+        
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+   
+    <div class="one_quarter">
+      
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy;- All Rights Reserved - <a href="#">Phishing Detection</a></p>
+    <p class="fl_right"><a target="_blank" href="" title=""></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
